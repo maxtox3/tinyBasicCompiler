@@ -23,10 +23,9 @@ class InputStatement(label: Int) : Statement(label) {
 
   override fun run(interpreter: Interpreter?) {
     val scanner = Scanner(System.`in`)
+    val value = scanner.nextLine()
     for (varr in variables) {
-      interpreter?.setVariable(
-        (varr as VariableExpression).name, scanner.next().toInt()
-      )
+      interpreter?.setVariable((varr as VariableExpression).name, value)
     }
     scanner.close()
   }

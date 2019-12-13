@@ -1,0 +1,5 @@
+REM "A VERY SIMPLE PROGRAM"
+
+20 LET A = "Hello World!"
+30 PRINT A
+40 END
